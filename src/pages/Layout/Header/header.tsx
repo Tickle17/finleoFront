@@ -1,26 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Grid } from "@mui/material";
 import "./style.scss";
-import basket from "../../shared/imgs/basket.svg";
-import search from "../../shared/imgs/search.svg";
-import profile from "../../shared/imgs/profile.svg";
+import basket from "../../../shared/imgs/basket.svg";
+import search from "../../../shared/imgs/search.svg";
+import profile from "../../../shared/imgs/profile.svg";
 
 export default function Header() {
   return (
     <header>
-      <Grid container>
+      <Grid container className="header">
         <Grid item xs={3}>
-          Logo
+          <NavLink to="/">
+            <img src="" alt="Логотип" />
+          </NavLink>
         </Grid>
         <Grid container item xs={6}>
           <nav>
             <ul>
               <li>
-                <Link to="/">Товары</Link>
+                <NavLink to="/">Товары</NavLink>
               </li>
               <li>
-                <Link to="/delivery">Доставка</Link>
+                <NavLink to="/delivery">Доставка</NavLink>
               </li>
             </ul>
           </nav>
