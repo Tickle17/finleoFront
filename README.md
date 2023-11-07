@@ -1,24 +1,3 @@
-Web app for any store
-
-stack:
-Front-end:
-div
-– React
-– Typescript
-– Formik
-– React-router-dom
-– SCSS
-– Redux
-– MUI
-Arch: custom FSD
-Backend:
-–Node js
-–Express
-–HTTPS
-–Sequelize
-–JWT
-BD:
-– PostgreSQL
 <h1 align="left">Web app for any store</h1>
 
 ###
@@ -27,7 +6,7 @@ BD:
 
 ###
 
-<h2 align="left">About me</h2>
+<h2 align="left">About project</h2>
 
 ###
 
@@ -38,41 +17,39 @@ BD:
 <h2 align="left">I code with</h2>
 
 ###
-
-<div align="left">
+  Front–end:
+      
+          – SCSS
+          – Formik
+          – React-router-dom
   <div>
-    –JWT
-  <div/>
-    <div>
-
-    – Formik
-  <div/>
-  <div>
-
-– SCSS
-  <div/>
-
-– React-router-dom
-
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="40" alt="jest logo"  />
-  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height="40" alt="redux logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" height="40" alt="materialui logo"  />
+  <img width="12" />
+  <div/>
+    
+Back-end:
+     
+     –JWT
+  <div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="40" alt="jest logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" alt="express logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" height="40" alt="sequelize logo"  />
   <img width="12" />
+  <div/>
+    
+BD:
+  <div>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo"  />
-</div>
-
-###
+  <div/>
