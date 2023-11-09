@@ -8,7 +8,7 @@ export default function MenuPage() {
     <div>
       <div className="bg"></div>
       <MenuTitle></MenuTitle>
-      <div style={{ height: "2000px" }}>
+      <div>
         <MenuItems></MenuItems>
       </div>
     </div>
