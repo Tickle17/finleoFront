@@ -1,6 +1,10 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import "./style.scss";
+import store from "../../../../shared/store/store";
+import { observer } from "mobx-react-lite";
+import Modal from "../../../../shared/items/modal/modal";
+import ModalContentItem from "./modalContentItem/modalContentItem";
 
 const data = [
   {
@@ -40,39 +44,63 @@ const data = [
   },
 ];
 
-export default function MenuItems() {
+interface Item {
+  id: number;
+  title: string;
+  description: string;
+  img: string;
+  price: string;
+}
+
+export default observer(function MenuItems() {
   return (
     <>
       <Grid container className="menuItems">
-        {data.map((item, index) => (
+        {data.map((item: Item, index) => (
           <Grid
             item
-            xs={3}
-            container
+            xs={6}
+            sm={4}
             className="menuItem"
             key={index}
-            // onClick={() => props.openModalHandler(item)}
+            onClick={() => {
+              store.openModal(
+                <ModalContentItem item={item}></ModalContentItem>
+              );
+            }}
           >
-            <Grid item xs={12}>
-              <img src={item.img} alt="" />
-            </Grid>
-            <Grid className="menuTitle" item xs={12}>
-              {item.title}
-            </Grid>
-            {item.description && item.description !== "" && (
-              <Grid className="menuDescription" item xs={12}>
-                <div>{item.description}</div>
+            <Grid className="content">
+              <Grid item xs={12}>
+                <img src={item.img} alt="" />
               </Grid>
-            )}
-            <Grid item xs={12} className="menuDescription">
-              {item.price} р.
+              <Grid className="menuTitle" item xs={12}>
+                {item.title}
+              </Grid>
+              {item.description && item.description !== "" && (
+                <Grid className="menuDescription" item xs={12}>
+                  <div>{item.description}</div>
+                </Grid>
+              )}
+              <Grid item xs={12} className="menuDescription">
+                {item.price} р.
+              </Grid>
+              {/*<Grid item xs={12}>*/}
+              {/*  <ShowModalButton visible={item.visible}></ShowModalButton>*/}
+              {/*</Grid>*/}
             </Grid>
-            {/*<Grid item xs={12}>*/}
-            {/*  <ShowModalButton visible={item.visible}></ShowModalButton>*/}
-            {/*</Grid>*/}
           </Grid>
         ))}
+        {store.modal ? (
+          <Modal
+            contentModal={store.modalContent}
+            closeContentModal={() => {
+              store.closeModal();
+            }}
+          ></Modal>
+        ) : (
+          <></>
+        )}
       </Grid>
     </>
   );
-}
+});

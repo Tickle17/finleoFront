@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <>
       <Header />
-      <div style={{ position: "relative" }}>
+      <div>
         <Outlet />
       </div>
       <Footer />
